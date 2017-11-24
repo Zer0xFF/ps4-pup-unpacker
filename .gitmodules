@@ -1,0 +1,3 @@
+[submodule "extern/zstr"]
+	path = extern/zstr
+	url = https://github.com/Thunder07/zstr.git

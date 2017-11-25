@@ -3,3 +3,11 @@ A utility to unpack PS4 update blobs that have been previously decrypted using [
 
 ## Note
 This utility will not unpack the contents of nested filesystems. The filesystem images in updates are FAT32, exFAT, etc images and can be mounted or unpacked with other tools.
+
+
+## To Build
+This app contains dependency to [mateidavid/zstr](https://github.com/mateidavid/zstr) as a submodule, as such it must be initiated before building.
+to do so run the following command:
+```
+git submodule update --init
+```

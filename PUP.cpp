@@ -2,15 +2,10 @@
 #include "zstr.hpp"
 
 #include <iostream>
-#ifndef __APPLE__
-#ifdef __unix__
-#include <experimental/filesystem>
+#ifdef _WIN32
+#include <direct.h>
+#define mkdir(path, mode) _mkdir(path)
 #else
-#include <filesystem>
-#endif
-namespace fs = std::experimental::filesystem;
-#else
-#include <sys/syslimits.h>
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -170,19 +165,11 @@ void CPUP::ProcessHeaderEntries()
 
 void CPUP::CreateDir(std::string outputPath)
 {
-#ifndef __APPLE__
-	auto outputParentPath = (fs::path(outputPath).parent_path().native());
-	if (!outputParentPath.empty())
-	{
-		fs::create_directories(outputParentPath);
-	}
-#else
 	std::string outputParentPath = outputPath.substr(0, outputPath.find_last_of("/\\"));
 	if (!outputParentPath.empty())
 	{
 		mkdir(outputParentPath.c_str(), 0775);
 	}
-#endif
 }
 
 void CPUP::ExtractAllEntries(std::string baseoutputpath)

@@ -286,7 +286,7 @@ void CPUP::ExtractSingleEntry(int index, Entry* entry, std::string outputfilepat
 		
 		for (int i = 0; i < blockCount; i++)
 		{
-			long compressedReadSize, uncompressedReadSize;
+			long compressedReadSize, uncompressedReadSize = 0;
 			bool blockIsCompressed = false;
 			
 			if (entry->IsCompressed() == true)

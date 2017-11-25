@@ -1,5 +1,6 @@
 #pragma once
 #include <fstream>
+#include <algorithm>
 
 class CBinaryReader : public std::ifstream
 {

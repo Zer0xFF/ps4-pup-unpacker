@@ -34,10 +34,10 @@ void CPUP::PopulateMaps()
 {
 	{
 		m_fileNames[3] = "wlan_firmware.bin";
-		m_fileNames[6] = "system_fs_image.bin";
-		m_fileNames[9] = "recovery_fs_image.bin";
-		m_fileNames[11] = "preinst_fs_image.bin";
-		m_fileNames[12] = "system_ex_fs_image.bin";
+		m_fileNames[6] = "system_fs_image.img";
+		m_fileNames[9] = "recovery_fs_image.img";
+		m_fileNames[11] = "preinst_fs_image.img";
+		m_fileNames[12] = "system_ex_fs_image.img";
 		m_fileNames[257] = "eula.xml";
 		m_fileNames[514] = "orbis_swu.self";
 	}

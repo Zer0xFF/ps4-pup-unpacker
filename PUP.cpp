@@ -34,21 +34,41 @@ void CPUP::PopulateMaps()
 {
 	{
 		m_fileNames[3] = "wlan_firmware.bin";
+		m_fileNames[5] = "secure_modules.bin";
 		m_fileNames[6] = "system_fs_image.img";
+		m_fileNames[8] = "eap_fs_image.img";
 		m_fileNames[9] = "recovery_fs_image.img";
 		m_fileNames[11] = "preinst_fs_image.img";
 		m_fileNames[12] = "system_ex_fs_image.img";
+		m_fileNames[34] = "torus2_firmware.bin";
 		m_fileNames[257] = "eula.xml";
+		m_fileNames[512] = "orbis_swu.self";
 		m_fileNames[514] = "orbis_swu.self";
+		m_fileNames[3337] = "cp_firmware.bin";
 	}
 	
 	{
 		m_deviceNames[1] = "/dev/sflash0s0x32b";
 		m_deviceNames[13] = "/dev/sflash0s0x32b";
+		m_deviceNames[32] = "/dev/sflash0s0x32b";
+		m_deviceNames[36] = "/dev/sflash0s0x32b";
+		m_deviceNames[40] = "/dev/sflash0s0x32b";
+		m_deviceNames[42] = "/dev/sflash0s0x32b";
+		m_deviceNames[44] = "/dev/sflash0s0x32b";
+		m_deviceNames[46] = "/dev/sflash0s0x32b";
 		m_deviceNames[2] = "/dev/sflash0s0x33";
 		m_deviceNames[14] = "/dev/sflash0s0x33";
+		m_deviceNames[33] = "/dev/sflash0s0x33";
+		m_deviceNames[37] = "/dev/sflash0s0x33";
+		m_deviceNames[43] = "/dev/sflash0s0x33";
 		m_deviceNames[3] = "/dev/sflash0s0x38";
+		m_deviceNames[34] = "/dev/sflash0s0x38";
+		m_deviceNames[48] = "/dev/sflash0s0x38";
 		m_deviceNames[4] = "/dev/sflash0s1.cryptx2b";
+		m_deviceNames[35] = "/dev/sflash0s1.cryptx2b";
+		m_deviceNames[38] = "/dev/sflash0s1.cryptx2b";
+		m_deviceNames[39] = "/dev/sflash0s1.cryptx2b";
+		m_deviceNames[45] = "/dev/sflash0s1.cryptx2b";
 		m_deviceNames[5] = "/dev/sflash0s1.cryptx3b";
 		m_deviceNames[10] = "/dev/sflash0s1.cryptx40";
 		m_deviceNames[9] = "/dev/da0x0.crypt";
@@ -65,6 +85,16 @@ void CPUP::PopulateMaps()
 		m_deviceNames[16] = "/dev/sbram0";
 		m_deviceNames[17] = "/dev/sbram0";
 		m_deviceNames[18] = "/dev/sbram0";
+		m_deviceNames[19] = "/dev/sbram0";
+		m_deviceNames[20] = "/dev/sbram0";
+		m_deviceNames[21] = "/dev/sbram0";
+		m_deviceNames[22] = "/dev/sbram0";
+		m_deviceNames[3337] = "cpfirm";
+		m_deviceNames[15] = "test";
+		m_deviceNames[769] = "/update";
+		m_deviceNames[770] = "/update";
+		m_deviceNames[782] = "test";
+		m_deviceNames[783] = "test";
 	}
 }
 

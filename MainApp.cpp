@@ -27,8 +27,8 @@ void MainApp::loop(int argc, const char **argv)
 	}
 	else
 	{
-		std::cout << "Invalid PUP image provideded" << std::endl
-		<< "Please ensure the image was decypted first." <<std::endl;
+		std::cout << "Invalid PUP image provided." << std::endl
+		<< "Please ensure the image was decrypted first." <<std::endl;
 		PrintUsage();
 	}
 }

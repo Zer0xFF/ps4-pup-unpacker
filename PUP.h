@@ -2,6 +2,7 @@
 #include "BinaryReader.h"
 #include "Entry.h"
 #include <map>
+#include <string>
 
 class CPUP
 {
@@ -15,6 +16,7 @@ public:
 	std::map<int, Entry> GetEntriesMap();
 
 private:
+	std::string PrepareOutputName(int, std::string);
 	void ProcessHeaderEntries();
 	void PopulateMaps();
 	void CreateDir(std::string outputPath);

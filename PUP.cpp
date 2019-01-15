@@ -1,5 +1,6 @@
 #include "PUP.h"
 #include "zstr.hpp"
+#include <string>
 
 #include <iostream>
 #ifdef _WIN32
@@ -98,6 +99,25 @@ void CPUP::PopulateMaps()
 	}
 }
 
+std::string CPUP::PrepareOutputName(int i, std::string name)
+{
+
+		std::string output;
+		std::string device =  name;
+		auto pos = device.rfind("/");
+		if (pos != std::string::npos)
+		{
+			std::string dir = device.substr(0, pos + 1);
+			std::string file = device.substr(pos + 1, device.length());
+			output = dir + std::to_string(i) + "_" + file;
+		}
+		else
+		{
+			output = std::to_string(i) + "_" + name;
+		}
+		return output;
+}
+
 void CPUP::ProcessHeaderEntries()
 {
 	for (int i = 0; i < m_header.entryCount; i++)
@@ -173,11 +193,11 @@ void CPUP::ProcessHeaderEntries()
 		{
 			if (m_fileNames.find(entry->Id()) != m_fileNames.end())
 			{
-				name = m_fileNames.at(entry->Id());
+				name = PrepareOutputName(entry->Id(), m_fileNames.at(entry->Id()));
 			}
 			else if(m_deviceNames.find(entry->Id()) != m_deviceNames.end())
 			{
-				name = m_deviceNames.at(entry->Id());
+				name = PrepareOutputName(entry->Id(), m_deviceNames.at(entry->Id()));
 			}
 			else
 			{
